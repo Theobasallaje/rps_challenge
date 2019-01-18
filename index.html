@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>RPS</title>
+    <link rel="stylesheet" href="./assets/css/style.css">   
+</head>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+
+<body>
+    
+    <div id="content">
+        <div id="header"> <h1 id="title">Rock Paper Scissors!</h1></div>
+        <span id="container">
+           <button id="request">request</button>
+        </span>
+    </div>
+
+    <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyAm-nCMVIohv9aTVNH8dz4BtfGsmD3N2ns",
+              authDomain: "rpschallenge-d4482.firebaseapp.com",
+              databaseURL: "https://rpschallenge-d4482.firebaseio.com",
+              projectId: "rpschallenge-d4482",
+              storageBucket: "",
+              messagingSenderId: "536415806997"
+            };
+            firebase.initializeApp(config);
+          </script>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>
