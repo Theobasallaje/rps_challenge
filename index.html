@@ -3,46 +3,90 @@
 
 <head>
     <title>RPS</title>
-    <link rel="stylesheet" href="./assets/css/style.css">   
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 
 <body>
-    
+
     <div id="content">
-        <div id="header"> <h1 id="title">Rock Paper Scissors!</h1></div>
+        <div id="header">
+            <h1 id="title">Rock Paper Scissors!</h1>
+        </div>
+        <div id="instructions">
+            <h3 id="nameDirections">Enter your name below to be selected for either player 1 or player 2</h3>
+        </div>
         <span id="container">
-           
-                <input type="text" id= "name" name="name">
-                <button id="start">start</button>
-     
-            <div id="playerOne">Player 1
-               
+
+            <input type="text" id="name" name="name">
+            <button id="start">Start</button>
+
+            <br><br><br>
+
+            <div id="playerOneName">
+
             </div>
-            <p id="p1Rock" class="option">Rock</p>
-            <p id="p1Paper" class="option">Paper</p>
-            <p id="p1Scissors" class="option">Scissors</p>
-            <div id="playerTwo">Player 2
-                
+
+            <div id="playerOneOptions">
+                <span id="choose1"></span>
+                <p class="option1"><span id="p1Rock"></span></p>
+                <p class="option1"><span id="p1Paper"></span></p>
+                <p class="option1"><span id="p1Scissors"></span></p>
             </div>
-           <button id="request">request</button>
+
+            <div id="score1">
+                <div id="wins1"></div>
+                <div id="losses1"></div>
+                <div id="ties1"></div>
+            </div>
+
+            <br><br><br>
+
+            <!-- <div id="wins1">Wins:<span></span></div>
+            <div id="losses1"></div>
+            <div id="ties1"></div> -->
+
+            <div id="playerTwoName">
+
+            </div>
+
+            <div id="playerTwoOptions">
+                <span id="choose2"></span>
+                <p class="option2"><span id="p2Rock"></span></p>
+                <p class="option2"><span id="p2Paper"></span></p>
+                <p class="option2"><span id="p2Scissors"></span></p>
+            </div>
+
+            <div id="score1">
+                <div id="wins2"></div>
+                <div id="losses2"></div>
+                <div id="ties2"></div>
+            </div>
+
+            <br><br><br>
+
+            <div id="chat">
+
+            </div>
+            <button id="rematch">Rematch</button>
+            <button id="reset">Reset</button>
         </span>
     </div>
 
     <script>
-            // Initialize Firebase
-            var config = {
-              apiKey: "AIzaSyAm-nCMVIohv9aTVNH8dz4BtfGsmD3N2ns",
-              authDomain: "rpschallenge-d4482.firebaseapp.com",
-              databaseURL: "https://rpschallenge-d4482.firebaseio.com",
-              projectId: "rpschallenge-d4482",
-              storageBucket: "",
-              messagingSenderId: "536415806997"
-            };
-            firebase.initializeApp(config);
-          </script>
- 
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAm-nCMVIohv9aTVNH8dz4BtfGsmD3N2ns",
+            authDomain: "rpschallenge-d4482.firebaseapp.com",
+            databaseURL: "https://rpschallenge-d4482.firebaseio.com",
+            projectId: "rpschallenge-d4482",
+            storageBucket: "",
+            messagingSenderId: "536415806997"
+        };
+        firebase.initializeApp(config);
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/javascript/game.js"></script>
 </body>
