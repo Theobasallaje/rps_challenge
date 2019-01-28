@@ -176,21 +176,18 @@ $('.option2').on('click', function () {
             database.ref('players/playerOneWins').set(playerOneWins);
             database.ref('players/playerTwoLosses').set(playerTwoLosses);
 
-            //diplay to DOM
         } else if (playerOnePick === "Rock" && playerTwoPick === "Paper") {
             console.log("in rock");
-            playerOneLosses++;
             playerTwoWins++;
-            console.log({playerOneLosses});
-            console.log({playerTwoWins});
-            database.ref('players/playerOneLosses').set(playerOneLosses);
+            console.log('player 1 losses', playerOneLosses);
+            console.log('player 2 wins', playerTwoWins);
             database.ref('players/playerTwoWins').set(playerTwoWins);
+            playerOneLosses++;
+            database.ref('players/playerOneLosses').set(playerOneLosses);
 
-            //display to DOM
         } else if (playerOnePick === "Rock" && playerTwoPick === "Rock") {
             ties++;
             database.ref('players/ties').set(ties);
-            //display to DOM
         }
 
         //player one chooses PAPER
@@ -201,7 +198,6 @@ $('.option2').on('click', function () {
             database.ref('players/playerOneWins').set(playerOneWins);
             database.ref('players/playerTwoLosses').set(playerTwoLosses);
 
-            //diplay to DOM
         } else if (playerOnePick === "Paper" && playerTwoPick === "Scissors") {
             console.log("in paper");
             playerOneLosses++
@@ -209,11 +205,9 @@ $('.option2').on('click', function () {
             database.ref('players/playerTwoWins').set(playerTwoWins);
             database.ref('players/playerOneLosses').set(playerOneLosses);
 
-            //display to DOM
         } else if (playerOnePick === "Paper" && playerTwoPick === "Paper") {
             ties++;
             database.ref('players/ties').set(ties);
-            //display to DOM
         }
 
         //player one chooses SCISSORS
@@ -224,7 +218,6 @@ $('.option2').on('click', function () {
             database.ref('players/playerOneWins').set(playerOneWins);
             database.ref('players/playerTwoLosses').set(playerTwoLosses);
 
-            //diplay to DOM
         } else if (playerOnePick === "Scissors" && playerTwoPick === "Rock") {
             console.log("in scissors");
             playerOneLosses++
@@ -232,11 +225,9 @@ $('.option2').on('click', function () {
             database.ref('players/playerTwoWins').set(playerTwoWins);
             database.ref('players/playerOneLosses').set(playerOneLosses);
 
-            //display to DOM
         } else if (playerOnePick === "Scissors" && playerTwoPick === "Scissors") {
             ties++;
             database.ref('players/ties').set(ties);
-            //display to DOM
         }
 
     }
