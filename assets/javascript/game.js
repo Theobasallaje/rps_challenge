@@ -58,6 +58,8 @@ $("#start").on("click", function () {
     })
 });
 
+"Version: " + navigator.appVersion + "\n" 
+
 database.ref("players").on("value", function (snapshot) {
     console.log("in players value listener");
     const players = snapshot.val();
@@ -172,8 +174,8 @@ $('.option2').on('click', function () {
         if (playerOnePick === "Rock" && playerTwoPick === "Scissors") {
             console.log("in rock");
             playerOneWins++;
-            playerTwoLosses++;
             database.ref('players/playerOneWins').set(playerOneWins);
+            playerTwoLosses++;
             database.ref('players/playerTwoLosses').set(playerTwoLosses);
 
         } else if (playerOnePick === "Rock" && playerTwoPick === "Paper") {
@@ -182,7 +184,7 @@ $('.option2').on('click', function () {
             console.log('player 1 losses', playerOneLosses);
             console.log('player 2 wins', playerTwoWins);
             database.ref('players/playerTwoWins').set(playerTwoWins);
-            playerOneLosses++;
+            playerOneLosses++; //need to put this after the first write to the database since the database event listener resets this variable since I am using global variables
             database.ref('players/playerOneLosses').set(playerOneLosses);
 
         } else if (playerOnePick === "Rock" && playerTwoPick === "Rock") {
@@ -194,15 +196,15 @@ $('.option2').on('click', function () {
         if (playerOnePick === "Paper" && playerTwoPick === "Rock") {
             console.log("in paper");
             playerOneWins++;
+            database.ref('players/playerOneWins').set(playerOneWins); 
             playerTwoLosses++; 
-            database.ref('players/playerOneWins').set(playerOneWins);
             database.ref('players/playerTwoLosses').set(playerTwoLosses);
 
         } else if (playerOnePick === "Paper" && playerTwoPick === "Scissors") {
             console.log("in paper");
-            playerOneLosses++
             playerTwoWins++
             database.ref('players/playerTwoWins').set(playerTwoWins);
+            playerOneLosses++
             database.ref('players/playerOneLosses').set(playerOneLosses);
 
         } else if (playerOnePick === "Paper" && playerTwoPick === "Paper") {
@@ -214,15 +216,15 @@ $('.option2').on('click', function () {
         if (playerOnePick === "Scissors" && playerTwoPick === "Paper") {
             console.log("in scissors");
             playerOneWins++;
-            playerTwoLosses++;
             database.ref('players/playerOneWins').set(playerOneWins);
+            playerTwoLosses++;
             database.ref('players/playerTwoLosses').set(playerTwoLosses);
 
         } else if (playerOnePick === "Scissors" && playerTwoPick === "Rock") {
             console.log("in scissors");
-            playerOneLosses++
             playerTwoWins++
             database.ref('players/playerTwoWins').set(playerTwoWins);
+            playerOneLosses++
             database.ref('players/playerOneLosses').set(playerOneLosses);
 
         } else if (playerOnePick === "Scissors" && playerTwoPick === "Scissors") {

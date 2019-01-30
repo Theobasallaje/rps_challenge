@@ -1,7 +1,34 @@
 html, body{
     height: 100%;
+    background-color: rgb(37, 37, 104);
+    color: rgb(255, 255, 255);
+    /* color:red; */
 }
 
 body{
     text-align: center;
+    background: url("../images/rps2.png");
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    /* background-repeat: repeat-x; */
+}
+
+#playerOneName, #playerOneOptions, #playerTwoName, #playerTwoOptions, #score1, #score2{
+    background-color: rgb(37, 37, 104);
+    color: rgb(255, 255, 255);
+}
+
+#chatContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#chat{
+    margin-top: 50px;
+    height: 500px;
+    width: 700px;
+    /* background: rgba(226, 220, 220, .5); */
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
