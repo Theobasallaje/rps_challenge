@@ -18,7 +18,7 @@ body{
     color: rgb(255, 255, 255);
 }
 
-#chatContainer{
+#playerOneOptionsContainer, #playerTwoOptionsContainer, #chatContainer, #playerOneNameContainer, #playerTwoNameContainer, #score1Container, #score2Container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -31,4 +31,16 @@ body{
     /* background: rgba(226, 220, 220, .5); */
     background-color: rgb(255, 255, 255);
     color: black;
+}
+
+#playerOneName, #playerTwoName, #playerOneOptions, #playerTwoOptions{
+    width: 220px;
+    height: 35px;
+    font-size: 1.5em;
+    font-weight: bold; 
+    border-radius: 25px;
+}
+
+#score1, #score2{
+    width: 100px;
 }
