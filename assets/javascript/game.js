@@ -8,6 +8,7 @@ var pOptions1 = $("#playerOneOptions");
 var pOptions2 = $("#playerTwoOptions");
 var ties = 0;
 var me;
+var meName;
 var meName1;
 var meName2;
 var clickCount = 0;
@@ -42,6 +43,7 @@ $("#start").on("click", function () {
             console.log('add new player');
             playerOne = newPlayer;
             me = 'playerOne';
+            meName = newPlayer;
             meName1 = newPlayer;
             database.ref('players/playerOne').set({
                 name: playerOne,
@@ -50,6 +52,7 @@ $("#start").on("click", function () {
         } else if (players.playerTwo.name == "Finding Player 2...") {
             playerTwo = newPlayer;
             me = 'playerTwo';
+            meName = newPlayer;
             meName2 = newPlayer;
             database.ref('players/playerTwo').set({
                 name: playerTwo,
@@ -135,6 +138,7 @@ database.ref("players").on("value", function (snapshot) {
         database.ref('players/playerOneLosses').set(0);
         database.ref('players/ties').set(0);
         database.ref('players/clickCount').set(0);
+        database.ref('/chat').set({});
         location.reload();
     });
 });
@@ -236,4 +240,23 @@ $('.option2').on('click', function () {
     pOptions2.html(pick);
 });
 
+
+//chat logic
+$("#send").on("click", function(){
+    var message = $("#chatInput").val();
+    console.log(message)
+    console.log(meName)
+    database.ref('/chat').push(
+        {
+            message: message,
+            name: meName
+        }
+    )
+});
+
+database.ref('/chat').on("child_added", function(snapshot){
+    console.log(snapshot.val());
+    const messageObj = snapshot.val();
+    $('#chat').append(`<div>${messageObj.name} : ${messageObj.message}</div>`)
+});
 

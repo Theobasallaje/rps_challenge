@@ -5,6 +5,10 @@ html, body{
     /* color:red; */
 }
 
+h1{
+    text-align: center;
+}
+
 body{
     text-align: center;
     background: url("../images/rps2.png");
@@ -13,34 +17,60 @@ body{
     /* background-repeat: repeat-x; */
 }
 
-#playerOneName, #playerOneOptions, #playerTwoName, #playerTwoOptions, #score1, #score2{
+/* #nameDirections{
+    width: 200px;
+} */
+
+#nameDirections, #playerOneName, #playerOneOptions, #playerTwoName, #playerTwoOptions, #score1, #score2{
     background-color: rgb(37, 37, 104);
     color: rgb(255, 255, 255);
 }
 
-#playerOneOptionsContainer, #playerTwoOptionsContainer, #chatContainer, #playerOneNameContainer, #playerTwoNameContainer, #score1Container, #score2Container {
+#players{
+    display: flex;
+    justify-content: center;
+}
+
+#playerOne, #playerTwo{
+    background-color: rgb(37, 37, 104);
+    color: rgb(255, 255, 255);
+    height: 400px;
+    width: 200px;
+}
+
+#chatContainer{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 #chat{
-    margin-top: 50px;
+    /* margin-top: 50px; */
     height: 500px;
     width: 700px;
     /* background: rgba(226, 220, 220, .5); */
     background-color: rgb(255, 255, 255);
     color: black;
+    font-size: 1.5em;
+    font-weight: bold; 
 }
 
-#playerOneName, #playerTwoName, #playerOneOptions, #playerTwoOptions{
+/* #chatContainer{
+    flex-direction: column;
+} */
+
+#playerOneName, #playerTwoName, #playerOneOptions, #playerTwoOptions, #score1, #score2{
     width: 220px;
     height: 35px;
     font-size: 1.5em;
     font-weight: bold; 
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
-#score1, #score2{
+/* #playerTwoName{
+    margin-top: 158px;
+} */
+
+/* #score1, #score2{
     width: 100px;
-}
+} */

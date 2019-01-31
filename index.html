@@ -15,7 +15,7 @@
             <h1 id="title">Rock Paper Scissors!</h1>
         </div>
         <div id="instructions">
-            <h3 id="nameDirections">Enter your name below to be selected for either player 1 or player 2</h3>
+            <h3><span id="nameDirections">Enter your name below to be selected for either player 1 or player 2</span></h3>
         </div>
         <span id="container">
 
@@ -24,53 +24,60 @@
 
             <br><br><br>
 
-            <div id=playerOneNameContainer>
-                <div id="playerOneName">
+            <div id="players">
+                <div id="playerOne">
+                    <div id=playerOneNameContainer>
+                        <div id="playerOneName">
 
+                        </div>
+                    </div>
+
+                    <div id="playerOneOptionsContainer">
+                        <div id="playerOneOptions">
+                            <span id="choose1"></span>
+                            <p class="option1"><span id="p1Rock"></span></p>
+                            <p class="option1"><span id="p1Paper"></span></p>
+                            <p class="option1"><span id="p1Scissors"></span></p>
+                        </div>
+                    </div>
+
+                    <div id="score1Container">
+                        <div id="score1">
+                            <div id="wins1"></div>
+                            <div id="losses1"></div>
+                            <div id="ties1"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div id="playerOneOptionsContainer">
-            <div id="playerOneOptions">
-                <span id="choose1"></span>
-                <p class="option1"><span id="p1Rock"></span></p>
-                <p class="option1"><span id="p1Paper"></span></p>
-                <p class="option1"><span id="p1Scissors"></span></p>
-            </div></div>
+                <!-- <br><br><br> -->
 
-            <div id="score1Container">
-                <div id="score1">
-                    <div id="wins1"></div>
-                    <div id="losses1"></div>
-                    <div id="ties1"></div>
-                </div>
-            </div>
-
-            <br><br><br>
-
-            <!-- <div id="wins1">Wins:<span></span></div>
+                <!-- <div id="wins1">Wins:<span></span></div>
             <div id="losses1"></div>
             <div id="ties1"></div> -->
+                <div id="playerTwo">
+                    <div id=playerTwoNameContainer>
+                        <div id="playerTwoName">
 
-            <div id=playerTwoNameContainer>
-                <div id="playerTwoName">
+                        </div>
+                    </div>
 
-                </div>
-            </div>
+                    <div id="playerTwoOptionsContainer">
+                        <div id="playerTwoOptions">
+                            <span id="choose2"></span>
+                            <p class="option2"><span id="p2Rock"></span></p>
+                            <p class="option2"><span id="p2Paper"></span></p>
+                            <p class="option2"><span id="p2Scissors"></span></p>
+                        </div>
+                    </div>
 
-            <div id="playerTwoOptionsContainer">
-            <div id="playerTwoOptions">
-                <span id="choose2"></span>
-                <p class="option2"><span id="p2Rock"></span></p>
-                <p class="option2"><span id="p2Paper"></span></p>
-                <p class="option2"><span id="p2Scissors"></span></p>
-            </div></div>
-
-            <div id="score2Container">
-                <div id="score2">
-                    <div id="wins2"></div>
-                    <div id="losses2"></div>
-                    <div id="ties2"></div>
+                    <div id="score2Container">
+                        <div id="score2">
+                            <div id="wins2"></div>
+                            <div id="losses2"></div>
+                            <div id="ties2"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -78,11 +85,14 @@
 
             <button id="rematch">Rematch</button>
             <button id="reset">Reset</button>
+            <h1>Chat</h1>
             <div id="chatContainer">
                 <div id="chat">
-                    <h1>Chat</h1>
+
                 </div>
             </div>
+            <input id="chatInput" type="text" name="name">
+            <button id="send">Send</button>
         </span>
     </div>
 
