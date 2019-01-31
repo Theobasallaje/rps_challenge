@@ -2,7 +2,7 @@
 
 # NOTE: Chat only works if you start the game, that way you know who you are talking to. 
 
-# Instruections:
+# Instructions:
 # Enter your name in the first field and click start (enter will NOT work) to be player one or player two.
 # Player assignments are based on the order the players enter the game, player one will be the first player to click start.
 # Once player two joins the game, player one will be prompted to select Rock, Paper, or Scissors.
