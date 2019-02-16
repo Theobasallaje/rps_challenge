@@ -13,3 +13,5 @@
 # Rematch resets only the players. You will need to enter the name of the players in the order previously entered for the score to be accurate.
 # Reset resets the score, the players, and the chat. You can enter players in any order after this option is selected.
 
+# Play Now! 
+# https://theobasallaje.github.io/rps_challenge/
